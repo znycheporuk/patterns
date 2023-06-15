@@ -1,0 +1,8 @@
+{
+  "name": "patterns",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "^0.6.0",
+    "typescript": "^5.1.3"
+  }
+}
