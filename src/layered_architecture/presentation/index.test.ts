@@ -15,28 +15,18 @@ describe("PresentationLayer", () => {
 
 	describe("getById function", () => {
 		it("finds existing entity", async () => {
-			spyOn(readline, "createInterface").mockImplementation(() => {
-				return {
-					question: (text: string, callback: any) => callback(1),
-				} as any;
-			});
-			const result = await presentationLayer.getById();
+			const result = await presentationLayer.getById(1);
 
 			expect(result).toMatchObject(data[0]);
 		});
 
 		it("properly handles string input", async () => {
 			const id = "string id";
-
-			spyOn(readline, "createInterface").mockImplementation(() => {
-				return {
-					question: (text: string, callback: any) => callback(id),
-				} as any;
-			});
-
+			
 			const presentationLayer = new PresentationLayer();
+			const res =  presentationLayer.getById(id)
 
-			expect(() => presentationLayer.getById()).toBe(undefined)
+			expect(res).toEqual(new Error("Id must be number!"))
 		});
 	});
 });

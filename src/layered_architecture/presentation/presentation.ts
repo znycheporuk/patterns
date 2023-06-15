@@ -14,16 +14,16 @@ export class PresentationLayer {
 		});
 	}
 
-	async getById() {
-		const id: string = await new Promise((resolve) => {
+	async getById(id?: number | string) {
+		id ??= await new Promise((resolve) => {
 			this.readline.question("Please enter entity id:\n", resolve);
 		});
 		this.readline.close();
-		
-		const idNumber = parseInt(id);
+
+		const idNumber = parseInt(id as string);
 
 		if (!idNumber) {
-			throw new Error("Id must be number!");
+			return new Error("Id must be number!");
 		}
 
 		const entity = this.businessLogicLayer.getById(idNumber);
