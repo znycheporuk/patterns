@@ -1,4 +1,4 @@
-import { describe, expect, it, jest, spyOn } from "bun:test";
+import { describe, expect, it, spyOn } from "bun:test";
 import { EventBus } from "~/event-bus/event-bus.ts";
 import { EventSource } from "~/event-bus/event-source.ts";
 
