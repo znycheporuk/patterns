@@ -3,7 +3,7 @@ import { Peer } from "~/peer-to-peer/peer.ts";
 
 
 describe("Peer", () => {
-	
+
 	it("should connect peers", async () => {
 		const p1 = new Peer("Peer 1");
 		const p2 = new Peer("Peer 2");

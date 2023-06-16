@@ -2,13 +2,13 @@ import { EventBus } from "~/event-bus/event-bus.ts";
 
 
 export class EventSource {
-  private readonly eventBus: EventBus;
+	private readonly eventBus: EventBus;
 
-  constructor(eventBus: EventBus) {
-    this.eventBus = eventBus;
-  }
+	constructor(eventBus: EventBus) {
+		this.eventBus = eventBus;
+	}
 
-  emitEvent(eventType: string, data: string): void {
-    this.eventBus.publish(eventType, data);
-  }
+	emitEvent(eventType: string, data: string): void {
+		this.eventBus.publish(eventType, data);
+	}
 }

@@ -7,7 +7,7 @@ const p3 = new Peer("Peer 3");
 
 p1.connect(p2);
 p1.connect(p3);
-p2.connect(p3)
+p2.connect(p3);
 p3.connect(p1);
 
 p1.send("1");

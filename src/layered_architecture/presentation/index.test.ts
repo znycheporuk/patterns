@@ -22,11 +22,11 @@ describe("PresentationLayer", () => {
 
 		it("properly handles string input", async () => {
 			const id = "string id";
-			
-			const presentationLayer = new PresentationLayer();
-			const res =  presentationLayer.getById(id)
 
-			expect(res).toEqual(new Error("Id must be number!"))
+			const presentationLayer = new PresentationLayer();
+			const res = presentationLayer.getById(id);
+
+			expect(res).toEqual(new Error("Id must be number!"));
 		});
 	});
 });

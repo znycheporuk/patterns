@@ -10,7 +10,7 @@ describe("EventListener", () => {
 		const eventType = "Test Event Type";
 		const eventHandler = (data: string) => data;
 		const eventListener = new EventListener(listenerName, eventHandler, eventBus, eventType);
-		
+
 		eventBus.subscribe = mock(() => null);
 		eventListener.startListening();
 

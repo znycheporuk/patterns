@@ -1,7 +1,7 @@
 export class Context {
-  private readonly input: string;
+	private readonly input: string;
 
-  constructor(input: string) {
-    this.input = input;
-  }
+	constructor(input: string) {
+		this.input = input;
+	}
 }
